@@ -7,6 +7,11 @@ import org.springframework.http.HttpStatus;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
+/**
+ * If get a validation error will return an apiError object
+ * @author comph
+ *
+ */
 @JsonTypeInfo(include=JsonTypeInfo.As.WRAPPER_OBJECT, use = JsonTypeInfo.Id.NAME)
 @JsonTypeName(value="apiError")
 public class APIError implements Serializable{

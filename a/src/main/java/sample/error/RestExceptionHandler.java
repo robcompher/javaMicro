@@ -10,6 +10,11 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @ControllerAdvice
 public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 
+	/**
+	 * If get an APIErrorException will convert that to a 422 apiError object
+	 * @param ex
+	 * @return
+	 */
 	@ExceptionHandler(APIErrorException.class)
 	@ResponseStatus(HttpStatus.UNPROCESSABLE_ENTITY)
 	public ResponseEntity<APIError> handleAPIErrorException(APIErrorException ex) {

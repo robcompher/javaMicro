@@ -1,21 +1,20 @@
 package sample.restModels;
 
-import javax.persistence.Column;
 
-public class StudentRestModel {
-	int id;
+public class PersonRestModel {
+	Long id;
 
 	String firstName;
 
 	String lastName;
 
-	boolean active;
+	Boolean active;
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -35,11 +34,11 @@ public class StudentRestModel {
 		this.lastName = lastName;
 	}
 
-	public boolean isActive() {
+	public Boolean isActive() {
 		return active;
 	}
 
-	public void setActive(boolean active) {
+	public void setActive(Boolean active) {
 		this.active = active;
 	}
 	
